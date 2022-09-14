@@ -22,7 +22,7 @@ body {
   align-items: center;
   justify-content: center;
   color: white;
-  font-size: 25px;
+  font-size: 1.5625rem;
   border-radius: 15px;
   background: rgb(255, 255, 255);
   background: linear-gradient(
@@ -41,7 +41,7 @@ body {
   align-items: center;
   padding-left: 5rem;
   color: white;
-  font-size: 32px;
+  font-size: 2rem;
   background-color: #171717;
   border: 2px solid #9dffad;
   border-radius: 15px;
@@ -131,7 +131,7 @@ body {
 button {
   padding: 10px 20px;
   border: none;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: bold;
   width: 300px;
   height: 50px;
@@ -190,4 +190,16 @@ button {
   .card {
     flex-direction: column;
   }
+}
+@media only screen and (min-width: 701px) {
+ #histories{
+  justify-content: center;
+  gap:3%
+ }
+ .card{
+  flex-basis: 30%;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: .5rem;
+ }
 }
