@@ -93,6 +93,10 @@ body {
 .inactive {
   border: 2px solid white !important;
 }
+.center{
+  display: grid;
+  place-items: center;
+}
 .hidden {
   display: none;
 }
