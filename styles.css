@@ -63,8 +63,8 @@ body {
 }
 #result {
   position: fixed;
-  top: 10%; 
-  left: 10%;
+  top: 50%; 
+  left: 50%;
   transform: translate(-50%, -50%);
   height: 250px;
   width: 400px;
@@ -93,13 +93,10 @@ body {
 .inactive {
   border: 2px solid white !important;
 }
-.center{
-  display: grid;
-  place-items: center;
-}
 .hidden {
   display: none;
 }
+
 .title {
   text-align: center;
   color: white;
