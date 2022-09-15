@@ -1,10 +1,176 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="forest">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Blog</title>
+    <script src="https://cdn.jsdelivr.net/npm/theme-change@2.0.2/index.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@2.24.0/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/d053072c7b.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>JS Recap</title>
   </head>
-  <body></body>
+  <body>
+    <header>
+      <h1 class="text-5xl font-semibold text-center py-4">
+        Recapping some important concepts in JavaScript
+      </h1>
+    </header>
+    <main>
+      <section class="container grid my-10 px-10 gap-10">
+        <div class="card lg:card-side bg-info-content shadow-xl">
+          <figure>
+            <img class="w-96 h-full" src="./images/LS-vs-SS.webp" alt="Album" />
+          </figure>
+          <div class="card-body bg-info-content">
+            <h2
+              class="card-title text-3xl text-neutral-contenttext-neutral-content"
+            >
+              What is the difference between
+              <span class="font-bold">Local Storage</span>
+              and
+              <span class="font-bold"> Session Storage</span>
+              ?
+            </h2>
+            <p>
+              The main difference between localStorage and sessionStorage is
+              that when using localStorage, the saved data will persist after
+              the users session has ended. So if you close the browser or tab
+              and then come back to the site, the data can still be retrieved.
+              On the other hand when using sessionStorage the data would be
+              removed after the tab or window is closed, hence the word
+              “session” in the name sessionStorage.
+            </p>
+            <div class="card-actions justify-end">
+              <a
+                href="https://anuradha.hashnode.dev/web-storage-apis"
+                class="btn btn-info text-black font-medium"
+                >Learn More <i class="fa-solid fa-arrow-right ml-1"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+        <div class="card lg:card-side bg-info-content shadow-xl">
+          <figure>
+            <img
+              class="w-96 h-full"
+              src="./images/global-vs-block.webp"
+              alt="Album"
+            />
+          </figure>
+          <div class="card-body bg-info-content">
+            <h2 class="card-title text-3xl text-neutral-content">
+              What is the difference between
+              <span class="font-bold"> Global Scope</span>
+              and
+              <span class="font-bold"> Block Scope</span>?
+            </h2>
+            <p>
+              A variable exists inside or outside a block. If a variable is
+              declared outside all functions or curly braces ({}), it exists in
+              the global scope. The global variables can be accessed by any line
+              of code in the program, including inside blocks. On the otherhand,
+              Block scope restricts the variable that is declared inside a
+              specific block, from access by the outside of the block. The let &
+              const keyword facilitates the variables to be block scoped. In
+              order to access the variables of that specific block, we need to
+              create an object for it. Variables declared with the var keyword,
+              do not have block scope. To sum up,<br />
+              In a browser environment, the global scope is controlled by the
+              window object while in Node. js, it's controlled by the global
+              object. Block scopes are what you get mostly when you use if
+              statements, for statements, and the like.
+            </p>
+            <div class="card-actions justify-end">
+              <a
+                href="https://dev.to/ale3oula/the-hor-r-o-r-scope-global-local-and-block-scope-in-js-37a1"
+                class="btn btn-info text-black font-medium"
+                >Learn More <i class="fa-solid fa-arrow-right ml-1"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+        <div class="card lg:card-side bg-info-content shadow-xl">
+          <figure>
+            <img
+              class="w-96 h-full"
+              src="./images/event-loop.png"
+              alt="Album"
+            />
+          </figure>
+          <div class="card-body bg-info-content">
+            <h2 class="card-title text-3xl text-neutral-content">
+              How Does
+              <span class="font-bold"> Event Loop</span>
+              Works in
+              <span class="font-bold"> JavaScript </span>
+              ?
+            </h2>
+            <p>
+              The event loop is a process that waits for the Call Stack to be
+              clear before pushing callbacks from the Task Queue to the Call
+              Stack. Once the Stack is clear, the event loop triggers and checks
+              the Task Queue for available callbacks. If there are any, it
+              pushes it to the Call Stack, waits for the Call Stack to be clear
+              again, and repeats the same process. A queue is a data structure
+              that works on the First in First out principle, so as tasks get
+              pushed into the queue, they get out in that same order. Tasks that
+              have been executed by the Web API’s, which are being pushed to the
+              Task Queue, then go back to the Call Stack to get their result
+              printed out.
+            </p>
+            <div class="card-actions justify-end">
+              <a href="" class="btn btn-info text-black font-medium"
+                >Learn More <i class="fa-solid fa-arrow-right ml-1"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+        <div class="card lg:card-side bg-info-content shadow-xl">
+          <figure>
+            <img
+              class="w-96 h-full"
+              src="./images/undefined2.jfif"
+              alt="Album"
+            />
+          </figure>
+          <div class="card-body bg-info-content">
+            <h2 class="card-title text-3xl text-neutral-content">
+              Describe ways to get
+              <span class="font-bold"> Undefined </span> in
+              <span class="font-bold"> JavaScript </span>
+            </h2>
+            <p>
+              Arguably, there are eight ways to get undefined in JavaScript.
+              These are,<br />
+              1. A variable is declared but never assigned a value to it will be
+              undefined when we try to access it,<br />
+              2. When a function is created but never added a return statement
+              will give us undefined when we call the function,<br />
+              3. Even if a return statement is present but no line of code is
+              written after return statement is going to return same as
+              above,<br />
+              4. When a function with parameters is called without passing the
+              arguments will take those unpassed arguments as undefined,<br />
+              5. In an Object, a property which doesn't exist in that Object
+              will give back undefined,<br />
+              6. In an Array, accessing an element outside of the index range
+              will return undefined,<br />
+              7. Deleting an element from array then try to access that element
+              with index is going to return undefined,<br />
+              8. Setting a variable as undefined directly.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </body>
 </html>
