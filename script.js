@@ -107,24 +107,25 @@ const closeModal = () => {
 const start = () => {
   // If already started, do not start again
   if (startTime) return;
-
   let count = 3;
   countdownOverlay.style.display = "flex";
 
   const startCountdown = setInterval(() => {
-    countdownOverlay.innerHTML = `<h1>${count}</h1>`;
-
     // finished timer
     if (count === 0) {
       // -------------- START TYPING -----------------
       document.addEventListener("keydown", typeController);
       countdownOverlay.style.display = "none";
+      countdownOverlay.innerHTML = "";
       display.classList.remove("inactive");
 
       clearInterval(startCountdown);
       startTime = new Date().getTime();
+      count += 3;
+    } else {
+      countdownOverlay.innerHTML = `<h1>${count}</h1>`;
+      count--;
     }
-    count--;
   }, 1000);
 };
 

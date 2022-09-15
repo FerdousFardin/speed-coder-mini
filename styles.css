@@ -17,7 +17,7 @@ body {
 }
 
 #question {
-  height: 100px;
+  min-height: 125px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -31,15 +31,16 @@ body {
     rgba(255, 255, 255, 0.05) 99.85%
   );
   backdrop-filter: blur(5px);
-  margin-bottom: 30px;
+  margin-bottom: 2rem;
+  padding: 0 1.5rem;
 }
 
 #display {
-  height: 100px;
+  min-height: 100px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  padding-left: 5rem;
+  padding:0.5rem 5rem;
   color: white;
   font-size: 2rem;
   background-color: #171717;
